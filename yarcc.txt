@@ -1,0 +1,9 @@
+#$ -cwd
+#$ -V
+#$ -l h_vmem=2G
+#$ -l h_rt=00:10:00
+export MALLOC_ARENA_MAX=4
+vmArgs="-Xmx100m -XX:ParallelGCThreads=1"
+java $vmArgs MandelBrot
+
+ 
